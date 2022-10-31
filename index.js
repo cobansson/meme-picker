@@ -1,4 +1,4 @@
-import { catsData } from "./data";
+import { catsData } from './data.js';
 
 const emotionRadios = document.getElementById("emotion-radios");
 const getImageBtn = document.getElementById("get-image-btn");
@@ -61,7 +61,7 @@ function closeBtn() {
 function getEmotionsArray(cats) {
     const emotionsArray = [];
     for (let cat of cats) {
-        for (emotion of cat.emotionTags) {
+        for (let emotion of cat.emotionTags) {
             if(!emotionsArray.includes(emotion)) {
                 emotionsArray.push(emotion);
             }
